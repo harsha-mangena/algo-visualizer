@@ -7,6 +7,12 @@ from utils import (display_all_sorting_algorithms,
 import numpy as np
 
 def main():
+
+    hide_github_icon = """
+            #GithubIcon {
+            visibility: hidden;
+        }
+    """
     # Page layout configurations
     st.set_page_config(page_title="Algorithm Visualizer", layout="wide", initial_sidebar_state="expanded")
 
@@ -50,6 +56,7 @@ def main():
                 if sort_pressed:
                     algorithm_object = get_object_from_factory(sorting_algorithm, c.SORTING_ALGORITHM)
                     algorithm_object.sort(array, callback=algorithm_object.display_bars)
+                    st.balloons()
 
 if __name__ == "__main__":
     main()

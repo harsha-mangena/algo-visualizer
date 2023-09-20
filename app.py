@@ -57,6 +57,8 @@ def main():
                     algorithm_object = get_object_from_factory(sorting_algorithm, c.SORTING_ALGORITHM)
                     algorithm_object.sort(array, callback=algorithm_object.display_bars)
                     st.balloons()
+        
+        st.info("🔜 This site will soon move to [DSA Ground](https://dsaground.streamlit.app/)")
 
 if __name__ == "__main__":
     main()
